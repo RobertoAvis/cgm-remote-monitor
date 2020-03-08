@@ -3,7 +3,7 @@ name: Deploy Node.js to Azure Web App
 on:
   push:
     tags:
-    - '*'
+    - 'azuredeploy*'
 
 # CONFIGURATION
 # For help, go to https://github.com/Azure/Actions
@@ -21,7 +21,7 @@ jobs:
     name: Build and Deploy
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@master
+    - uses: actions/checkout@${{ env.GITHUB_REF }}
     - name: Print stuff
       run: |
         echo $GITHUB_REF
