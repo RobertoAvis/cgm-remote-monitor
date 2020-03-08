@@ -3,7 +3,7 @@ name: Deploy Node.js to Azure Web App
 on:
   push:
     tags:
-    - 'azuredeploy*'
+    - '*'
 
 # CONFIGURATION
 # For help, go to https://github.com/Azure/Actions
