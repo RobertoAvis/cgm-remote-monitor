@@ -21,7 +21,7 @@ jobs:
     name: Build and Deploy
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@${{ env.GITHUB_REF }}
+    - uses: actions/checkout@master
     - name: Print stuff
       run: |
         echo $GITHUB_REF
